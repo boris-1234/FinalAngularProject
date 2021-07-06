@@ -1,0 +1,24 @@
+<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th >fullName</th>
+        <th>age</th>
+        <th >city</th>
+        <th>picture</th>
+        <th>avg</th>
+        <th>Edit Me</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pupil of pupilArray|async" [class]=gradesAvgColour(pupil)>
+        <td>{{pupil.fullName}}</td>
+        <td>{{pupil.age}}</td>
+        <td>{{pupil.city}}</td>
+        <td><img  style=" height:50px;width: 50px;" [src]=pupil.picture alt="Image"></td>
+        <td>{{gradesRow[pupil.id].avg}}</td>
+        <td> <button routerLink="/pupils/{{pupil.id}}" class="btn btn-danger">Edit My Personal Details </button></td>
+      </tr>
+    </tbody>
+</table>
+
+

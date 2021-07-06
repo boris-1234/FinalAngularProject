@@ -1,0 +1,23 @@
+<div class="container" style="background-color: white; height: 20%; width: 80%; text-align: center;" >
+  <h1>Welcome to Hogwarts School The Best Wizards School in The World</h1>
+  <p>Our Vision is not only to make Good  People </p>
+  <p>Wizards but also Create Good and Educational</p>
+  <p> that will use Cleverly our Magics we Teachs for good pourpses</p>
+  <p>Number of Student in our school:{{this.pupilArrayCount}}</p>
+</div>
+<div class="d-flex flex-wrap container">
+<div class="card col-sm-4" *ngFor="let i of teacherArray|async">
+    <img [src]=i.picture class="card-img-top" style="height:200px; width:200px; text-align: center;" >
+    <div class="card-body">
+      <p class="card-title col">{{i.fullName}}</p>
+      <p class="card-text col">His Id:{{i.id}}</p>
+      <p class="card-text col">MonthSalary:{{i.salary_per_hour*i.work_hours_per_month}}</p>
+      <p class="card-text col">age:{{i.age}}</p>
+      <p class="card-text col">city:{{i.city}}</p>
+      <p class="card-text col">proffecy:{{i.proffecy}}</p>
+      <p class="card-text col">HourSalary:{{i.salary_per_hour}}</p>
+      <p class="card-text col"> Years Of Seniority : {{i.years_of_seniorty}}</p>
+      <button routerLink="/teachers/{{i.id}}" class="btn btn-danger col" style="margin-top: 15px;">Edit My Personal Details </button>
+      </div>
+  </div>
+</div>

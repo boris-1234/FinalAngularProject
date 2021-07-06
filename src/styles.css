@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+.background {
+    background-image: url("https://i.pinimg.com/originals/e1/1b/fa/e11bfa8f8a90d7910fb5d94d9d5bc685.jpg");
+    color: white;
+}
+p,h1,h5,label{color: black;}
+.container {
+    background-color: transparent;
+    width: 90%;
+    padding: 10px;
+}

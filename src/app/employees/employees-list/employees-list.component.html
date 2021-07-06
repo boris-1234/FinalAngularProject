@@ -1,0 +1,29 @@
+<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th >fullName</th>
+        <th>age</th>
+        <th >city</th>
+        <th>picture</th>
+        <th>work subject</th>
+        <th>work hours per month</th>
+        <th>salary per hour</th>
+        <th>Salary</th>
+
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeArray|async" [class]=salaryAvgDetails(employee)>
+        <td>{{employee.fullName}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.city}}</td>
+        <td><img  style=" height:50px;width: 50px;" [src]=employee.picture alt="Image"></td>
+        <td>{{employee.work_subject}}</td>
+        <td>{{employee.work_hours_per_month}}</td>
+        <td>{{employee.salary_per_hour}}</td>
+        <td>{{employeeRow[employee.id].TotalMonthHours}}</td>
+      </tr>
+    </tbody>
+</table>
+
